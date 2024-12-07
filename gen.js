@@ -177,12 +177,15 @@ for (const { blocks, id, title } of _pages) {
 
 	await Deno.writeTextFile(`${id}.html`, `<!DOCTYPE html>
 <link rel=stylesheet href=style.css>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <body><div class=breadcrumb>You Browse: <a href="./index.html">top</a> / <a href="./${id}.html">${title}</a></div>${html_content}</body>
 `)
 }
 
 await Deno.writeTextFile(`index.html`, `<!DOCTYPE html>
 	<link rel=stylesheet href=style.css>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
 	<body>
 	<h1>trip3</h1>
 	<p>
